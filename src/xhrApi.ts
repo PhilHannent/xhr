@@ -179,8 +179,6 @@ export class XhrApi implements IXHRApi {
     } catch (error) {
       return setupXhrResponse(error)
     }
-
-
   }
 
   xhrStream(xhroptions: IXHROptions, progressDelegate: (progressData: IXHRProgress) => void): Promise<XMLHttpRequest> {
