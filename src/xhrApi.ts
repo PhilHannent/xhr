@@ -175,15 +175,9 @@ export class XhrApi implements IXHRApi {
         responseType: '',
         statusText: response.statusText,
       };
-      if (xhrResponse.status === 200) {
-        return setupXhrResponse(xhrResponse);
-      }
-      else {
-        throw setupXhrResponse(xhrResponse);
-      }
+      return setupXhrResponse(xhrResponse);
     } catch (error) {
-
-      throw setupXhrResponse(error)
+      return setupXhrResponse(error)
     }
 
 

@@ -135,15 +135,10 @@ class XhrApi {
                 responseType: '',
                 statusText: response.statusText,
             };
-            if (xhrResponse.status === 200) {
-                return (0, utils_1.setupXhrResponse)(xhrResponse);
-            }
-            else {
-                throw (0, utils_1.setupXhrResponse)(xhrResponse);
-            }
+            return (0, utils_1.setupXhrResponse)(xhrResponse);
         }
         catch (error) {
-            throw (0, utils_1.setupXhrResponse)(error);
+            return (0, utils_1.setupXhrResponse)(error);
         }
     }
     xhrStream(xhroptions, progressDelegate) {
